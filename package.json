@@ -2,10 +2,11 @@
   "name": "lab2-module",
   "version": "1.0.0",
   "description": "Laboration 2. Making a module.",
-  "main": "index.js",
+  "main": "./src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "test": "jest",
+    "start": "node ./src/examples/app.js",
     "dev": "your-dev-command-here"
   },
   "repository": {
@@ -24,11 +25,14 @@
   },
   "devDependencies": {
     "@lnu/eslint-config": "^1.1.10",
+    "@types/jest": "^29.5.5",
     "eslint": "^8.49.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsdoc": "^46.8.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1"
   }
 }
