@@ -75,9 +75,36 @@ function showVowelsFromFile (filePath) {
   return vowelsInFile
 }
 
+function showConsonantsFromFile (filePath) {
+  const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
+
+  const fileContent = readFile(filePath, 'utf8')
+  let consonantsInFile = ''
+  for (const sign of fileContent) {
+    if (consonants.includes(sign)) {
+      consonantsInFile += sign
+    }
+  }
+  return vowelsInFile
+}
+
+function countNumbersInFile (filePath) {
+  const numbers = Number
+  let count = 0
+
+  const fileContent = readFile(filePath, 'utf8')
+  for (const sign of fileContent) {
+    if (numbers.includes(sign)) {
+      count++
+    }
+  }
+  return count
+}
+
 export {
   countSignsInFile,
   countVowelsInFile,
   countConsonantsInFile,
-  showVowelsFromFile
+  showVowelsFromFile,
+  showConsonantsFromFile
 }
