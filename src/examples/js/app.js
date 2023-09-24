@@ -1,4 +1,9 @@
-// import Counters from '../../index.js'
+// import {
+//     countSignsInFile as countSigns,
+//     countVowelsInFile as countVowels,
+//     countConsonantsInFile as countConsonants,
+//     showVowelsFromFile as showVowels
+// } from '../../index.js'
 
 const template = document.createElement('template')
 
@@ -82,28 +87,28 @@ customElements.define('counter-app',
     /**
      *
      */
-     async setupListeners () {
-         const fileInput = this.shadowRoot.querySelector('#fileInput')
-         const countButton = this.shadowRoot.querySelector('#countButton')
-         const totalSigns = this.shadowRoot.querySelector('#totalSigns')
-         const vowels = this.shadowRoot.querySelector('#vowels')
-         const consonants = this.shadowRoot.querySelector('#consonants')
-         
-         countButton.addEventListener('click', async () => {
-            console.log('click')
-             const file = fileInput.files[0]
-             
-             if (file) {
-                 const filePath = URL.createObjectURL(file)
-                 const signCount = Counters.countSignsInFile(filePath)
-                 const vowelsCount = Counters.countVowelsInFile(filePath)
-                 const consonantsCount = Counters.countConsonantsInFile(filePath)
-                 
-                 totalSigns.textContent = signCount
-                 vowels.textContent = vowelsCount
-                 consonants.textContent = consonantsCount
-                }
-            })
+    async setupListeners () {
+      const fileInput = this.shadowRoot.querySelector('#fileInput')
+      const countButton = this.shadowRoot.querySelector('#countButton')
+      const totalSigns = this.shadowRoot.querySelector('#totalSigns')
+      const vowels = this.shadowRoot.querySelector('#vowels')
+      const consonants = this.shadowRoot.querySelector('#consonants')
+
+      countButton.addEventListener('click', async () => {
+        console.log('click')
+        const file = fileInput.files[0]
+
+        if (file) {
+          const filePath = URL.createObjectURL(file)
+          const signCount = countSigns(filePath)
+          const vowelsCount = countVowels(filePath)
+          const consonantsCount = countConsonants(filePath)
+          const showVowels = showVowels(filePath)
+
+          totalSigns.textContent = signCount
+          vowels.textContent = vowelsCount
+          consonants.textContent = consonantsCount
         }
-    })
-    
+      })
+    }
+  })

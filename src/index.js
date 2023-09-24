@@ -1,5 +1,13 @@
-import * as Counters from './lib/sign-counter.js'
+import {
+  countSignsInFile,
+  countVowelsInFile,
+  countConsonantsInFile,
+  showVowelsFromFile
+} from './lib/sign-counter.js'
 
 export {
-  Counters
+  countSignsInFile,
+  countVowelsInFile,
+  countConsonantsInFile,
+  showVowelsFromFile
 }
