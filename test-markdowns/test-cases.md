@@ -18,7 +18,7 @@
 
 **Expected Results:**
 
-- The function should return 37, as there are 37 signs in the provided test file.
+- The function should return `37`, as there are `37` signs in the provided test file.
 
 **Assertions:**
 
@@ -44,7 +44,7 @@
 
 **Expected Results:**
 
-- The function should return 13, as there are 13 vowels in the provided test file.
+- The function should return `13`, as there are `13` vowels in the provided test file.
 
 **Assertions:**
 
@@ -68,13 +68,13 @@
 
 **Expected Results:**
 
-- The function should return 21, as there are 21 consonants in the provided test file.
+- The function should return `22`, as there are `22` consonants in the provided test file.
 
 **Assertions:**
 
 - The returned count should be a non-negative integer.
 
-## TC5: Display vowels in file
+## TC4: Display vowels in file
 
 **Scenario:** Verify that the `showVowelsFromFile` function correctly displays all vowels from a file.
 
@@ -98,7 +98,7 @@
 
 - The returned signs should not include any other signs.
 
-## TC6: Display consonants in file
+## TC5: Display consonants in file
 
 **Scenario:** Verify that the `showConsonantsFromFile` function correctly displays the consonants from the provided file.
 
@@ -122,7 +122,7 @@
 
 - The returned signs should not include any other signs.
 
-## TC7: Show top 5 of most used signs
+## TC6: Show top 5 of most used signs
 
 **Scenario:** Verify that the `getTopSigns` function correctly counts, order and show the top five most used signs in a file.
 
@@ -146,7 +146,7 @@
 
 - The returned signs should be the top five.
 
-## TC8: Show top 5 of most used vowels
+## TC7: Show top 5 of most used vowels
 
 **Scenario:** Verify that the `getTopVowels` function correctly counts, order and show the top five most used vowels in a file.
 
@@ -170,7 +170,7 @@
 
 - The returned vowels should be the top five.
 
-## TC9: Show top 5 of most used consonants
+## TC8: Show top 5 of most used consonants
 
 **Scenario:** Verify that the `getTopConsonants` function correctly counts, order and show the top five most used consonants in a file.
 
