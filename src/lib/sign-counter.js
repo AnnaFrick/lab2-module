@@ -1,110 +1,68 @@
 /**
  * A module that handles a file and its content.
  */
-import { readFileSync as readFile } from 'fs'
+import { readFileSync } from 'fs'
 
 /**
- * Counts all signs in a file.
  *
- * @param {*} filePath A file that should be read.
- * @returns The amount of signs in the file.
  */
-function countSignsInFile (filePath) {
-  const fileContent = readFile(filePath, 'utf8')
-
-  // Counting signs and replacing blank spaces with empty string
-  const nonWhitespaceFileContent = fileContent.replace(/\s/g, '')
-  const signCount = nonWhitespaceFileContent.length
-  return signCount
-}
-
-/**
- * Counts all vowels in a file.
- *
- * @param {*} filePath A file that should be read.
- * @returns The amount of vowels in the file.
- */
-function countVowelsInFile (filePath) {
-  const vowels = 'aeiouyAEIOUY'
-  let count = 0
-
-  const fileContent = readFile(filePath, 'utf8')
-  for (const sign of fileContent) {
-    if (vowels.includes(sign)) {
-      count++
-    }
+export class SignCounter {
+  /**
+   *
+   * @param filePath
+   */
+  constructor (filePath) {
+    this.filePath = filePath
+    this.fileContent = readFileSync(filePath, 'utf8')
   }
-  return count
-}
 
-/**
- * Counts all consonants in a file.
- *
- * @param {*} filePath A file that should be read.
- * @returns The amount of consonants in the file.
- */
-function countConsonantsInFile (filePath) {
-  const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
-  let count = 0
-
-  const fileContent = readFile(filePath, 'utf8')
-  for (const sign of fileContent) {
-    if (consonants.includes(sign)) {
-      count++
-    }
+  /**
+   * Counts all signs in a file.
+   *
+   * @param {*} \ A file that should be read.
+   * @param filePath
+   * @returns The amount of signs in the file.
+   */
+  countSignsInFile () {
+    // Counting signs and replacing blank spaces with empty string
+    const nonWhitespaceFileContent = this.fileContent.replace(/\s/g, '')
+    const signCount = nonWhitespaceFileContent.length
+    return signCount
   }
-  return count
-}
 
-/**
- * A function that returns all vowels in a file.
- *
- * @param {*} filePath A file that should be read.
- * @returns All vowels in the file.
- */
-function showVowelsFromFile (filePath) {
-  const vowels = 'aeiouyAEIOUY'
+  /**
+   * Counts all vowels in a file.
+   *
+   * @param {*} filePath A file that should be read.
+   * @returns The amount of vowels in the file.
+   */
+  countVowelsInFile () {
+    const vowels = 'aeiouyAEIOUY'
+    let count = 0
 
-  const fileContent = readFile(filePath, 'utf8')
-  let vowelsInFile = ''
-  for (const sign of fileContent) {
-    if (vowels.includes(sign)) {
-      vowelsInFile += sign
+    for (const sign of this.fileContent) {
+      if (vowels.includes(sign)) {
+        count++
+      }
     }
+    return count
   }
-  return vowelsInFile
-}
 
-function showConsonantsFromFile (filePath) {
-  const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
+  /**
+   * Counts all consonants in a file.
+   *
+   * @param {*} filePath A file that should be read.
+   * @returns The amount of consonants in the file.
+   */
+  countConsonantsInFile () {
+    const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
+    let count = 0
 
-  const fileContent = readFile(filePath, 'utf8')
-  let consonantsInFile = ''
-  for (const sign of fileContent) {
-    if (consonants.includes(sign)) {
-      consonantsInFile += sign
+    for (const sign of this.fileContent) {
+      if (consonants.includes(sign)) {
+        count++
+      }
     }
+    return count
   }
-  return vowelsInFile
-}
-
-function countNumbersInFile (filePath) {
-  const numbers = Number
-  let count = 0
-
-  const fileContent = readFile(filePath, 'utf8')
-  for (const sign of fileContent) {
-    if (numbers.includes(sign)) {
-      count++
-    }
-  }
-  return count
-}
-
-export {
-  countSignsInFile,
-  countVowelsInFile,
-  countConsonantsInFile,
-  showVowelsFromFile,
-  showConsonantsFromFile
 }

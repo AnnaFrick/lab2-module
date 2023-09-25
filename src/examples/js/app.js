@@ -1,9 +1,9 @@
-// import {
-//     countSignsInFile as countSigns,
-//     countVowelsInFile as countVowels,
-//     countConsonantsInFile as countConsonants,
-//     showVowelsFromFile as showVowels
-// } from '../../index.js'
+import {
+  countSignsInFile as countSigns,
+  countVowelsInFile as countVowels,
+  countConsonantsInFile as countConsonants,
+  showVowelsFromFile as showVowels
+} from '../../index.js'
 
 const template = document.createElement('template')
 

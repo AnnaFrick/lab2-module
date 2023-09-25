@@ -1,13 +1,9 @@
-import {
-  countSignsInFile,
-  countVowelsInFile,
-  countConsonantsInFile,
-  showVowelsFromFile
-} from './lib/sign-counter.js'
+import { SignCounter } from './lib/sign-counter.js'
+import { SignDisplayer } from './lib/sign-displayer.js'
+import { SignStatistics } from './lib/sign-statistics.js'
 
 export {
-  countSignsInFile,
-  countVowelsInFile,
-  countConsonantsInFile,
-  showVowelsFromFile
+  SignCounter,
+  SignDisplayer,
+  SignStatistics
 }
