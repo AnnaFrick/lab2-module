@@ -13,6 +13,10 @@ You can install this module using npm:
 npm install sign-analysis
 ```
 
+## Usage
+
+```javascript
+
 ## References
 
 **SignCounter**
