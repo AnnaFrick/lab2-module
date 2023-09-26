@@ -1,15 +1,12 @@
 /**
- * A module that handles a file and its content.
+ * A module that handles a file and count its content.
  */
 import { readFileSync } from 'fs'
 
-/**
- *
- */
 export class SignCounter {
   /**
    *
-   * @param filePath
+   * @param filePath The path to the file to analyze.
    */
   constructor (filePath) {
     this.filePath = filePath
@@ -19,8 +16,6 @@ export class SignCounter {
   /**
    * Counts all signs in a file.
    *
-   * @param {*} \ A file that should be read.
-   * @param filePath
    * @returns The amount of signs in the file.
    */
   countSignsInFile () {
@@ -33,7 +28,6 @@ export class SignCounter {
   /**
    * Counts all vowels in a file.
    *
-   * @param {*} filePath A file that should be read.
    * @returns The amount of vowels in the file.
    */
   countVowelsInFile () {
@@ -51,7 +45,6 @@ export class SignCounter {
   /**
    * Counts all consonants in a file.
    *
-   * @param {*} filePath A file that should be read.
    * @returns The amount of consonants in the file.
    */
   countConsonantsInFile () {

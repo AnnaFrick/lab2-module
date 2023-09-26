@@ -1,12 +1,12 @@
 import { readFileSync } from 'fs'
 
 /**
- *
+ * A class that handles statistics of different signs a file.
  */
 export class SignStatistics {
   /**
    *
-   * @param filePath
+   * @param filePath The path to the file to analyze.
    */
   constructor (filePath) {
     this.filePath = filePath

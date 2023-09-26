@@ -5,7 +5,7 @@ import { readFileSync } from 'fs'
  */
 export class SignDisplayer {
   /**
-   *
+   * @param filePath The path to the file to analyze.
    */
   constructor (filePath) {
     this.file = filePath
@@ -13,7 +13,8 @@ export class SignDisplayer {
   }
 
   showContentFromFile () {
-    return this.fileContent
+    const fileContent = this.fileContent
+    return fileContent
   }
 
   /**
