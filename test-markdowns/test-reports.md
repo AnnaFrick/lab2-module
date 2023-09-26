@@ -192,3 +192,23 @@ The results didn't match the expected output. The lower case and upper case of t
 
 - Test Date: September 25, 2023
 - Author: Anna Engström Frick
+
+## Test report for TC9
+
+**Results**
+
+The results of the test are as follows:
+`This is a test file! Lets see how this counts.`
+
+**Status**
+
+The test passed.
+
+**Comments**
+
+Output was as expected. It included all the signs in the file, even whitespaces.
+
+**Test Date and Author**
+
+- Test Date: September 26, 2023
+- Author: Anna Engström Frick

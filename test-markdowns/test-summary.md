@@ -50,11 +50,12 @@ const signStatistics = new SignStatistics(filePath)
 | TC6: `getTopSigns` | Manually with data input. | FAILED |
 | TC7: `getTopVowels` | Manually with data input. | PASSED |
 | TC8: `getTopConsonants` | Manually with data input. | FAILED  |
+| TC9: `showContentFromFile` | Manually with data input. | PASSED  |
 
 
 
-- Total test cases executed: 8
-- Passed: 6
+- Total test cases executed: 9
+- Passed: 7
 - Failed: 2
 
 ## Conclusions

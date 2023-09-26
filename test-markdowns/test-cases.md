@@ -24,8 +24,6 @@
 
 - The returned count should be a non-negative integer.
 
-
-
 ## TC2: Counting vowels in file
 
 **Scenario:** Verify that the `countVowelsInFile` function correctly counts all vowels in a file.
@@ -193,3 +191,27 @@
 **Assertions:**
 
 - The returned consonants should be the top five.
+
+## TC9: Display content from file
+
+**Scenario:** Verify that the `showContentFromFile` function correctly displays the content from a file.
+
+**Expected Outcome:** The function should return the input data (content) that is in the file.
+
+**Test Steps:**
+
+1. Provide a test file with known content.
+2. Call the `showContentFromFile` function on the test file.
+3. Verify that the function returns the expected vowels.
+
+**Input Data:**
+
+- Test file: `test.txt` with content "This is a test file! Lets see how this counts."
+
+**Expected Results:**
+
+- The function should return `This is a test file! Lets see how this counts.`, as the vowels `This is a test file! Lets see how this counts.` are provided in test file.
+
+**Assertions:**
+
+- All kind of signs should be returned.

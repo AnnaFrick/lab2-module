@@ -10,6 +10,7 @@ console.log('Count of Vowels in File: ', counter.countVowelsInFile())
 console.log('Count of Consonants in File: ', counter.countConsonantsInFile())
 
 const displayer = new SignDisplayer(filePath)
+console.log('File content: ', displayer.showContentFromFile())
 console.log('Vowels in File: ', displayer.showVowelsFromFile())
 console.log('Consonants in File: ', displayer.showConsonantsFromFile())
 

@@ -6,18 +6,19 @@ import { readFileSync } from 'fs'
 export class SignDisplayer {
   /**
    *
-   * @param filePath
    */
   constructor (filePath) {
     this.file = filePath
     this.fileContent = readFileSync(filePath, 'utf8')
   }
 
+  showContentFromFile () {
+    return this.fileContent
+  }
+
   /**
    * A function that returns all vowels in a file.
    *
-   * @param {*} filePath A file that should be read.
-   * @returns All vowels in the file.
    */
   showVowelsFromFile () {
     const vowels = 'aeiouyAEIOUY'
@@ -33,9 +34,6 @@ export class SignDisplayer {
 
   /**
    * A function that returns all consonants in a file.
-   *
-   * @param {*} filePath A file that should be read.
-   * @returns All vowels in the file.
    */
   showConsonantsFromFile () {
     const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
