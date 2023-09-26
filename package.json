@@ -1,10 +1,12 @@
 {
-  "name": "lab2-module",
-  "version": "1.0.0",
+  "name": "sign-analysis-module",
+  "version": "1.0.1",
   "description": "Laboration 2. Making a module.",
   "type": "module",
-  "main": "src/examples/js/index.js",
-  "browser": "src/js/examples/index.js",
+  "main": "src/lib/index.js",
+  "files": [
+    "src/lib"
+  ],
   "scripts": {
     "test": "node ./src/test/test-app.js",
     "start": "vite",

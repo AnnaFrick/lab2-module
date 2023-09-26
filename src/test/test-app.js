@@ -1,6 +1,6 @@
-import { SignCounter } from "../index.js"
-import { SignDisplayer } from "../index.js"
-import { SignStatistics } from "../index.js"
+import { SignCounter } from "../lib/index.js"
+import { SignDisplayer } from "../lib/index.js"
+import { SignStatistics } from "../lib/index.js"
 
 const filePath = 'test.txt'
 

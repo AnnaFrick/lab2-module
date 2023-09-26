@@ -1,5 +1,3 @@
-Laboration description:
-https://docs.google.com/document/d/1i4WmVngYQt2i82sYn_jRNDpnE-7mKmYahz0VJtCe4_A/edit
 # Lab 2 Module - Sign Analysis Module
 Laboration 2. Making a module.
 
@@ -10,8 +8,22 @@ A JavaScript module for analyzing text files to count signs, vowels, consonants,
 You can install this module using npm:
 
 ```bash
-npm install sign-analysis
+npm install sign-analysis-module
 ```
+
+## Usage
+
+```javascript
+import { SignCounter, SignDisplayer, SignStatistics } from 'sign-analysis-module'
+
+const filePath = 'test.txt'
+
+const signCounter = new SignCounter(filePath)
+const signDisplayer = new SignDisplayer(filePath)
+const signStatistics = new SignStatistics(filePath)
+
+```
+
 
 
 ## References
