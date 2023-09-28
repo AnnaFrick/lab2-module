@@ -1,7 +1,8 @@
 # Lab 2 Module - Sign Analysis Module
-Laboration 2. Making a module.
 
-A JavaScript module for analyzing text files to count and display signs, vowels, consonants and retrieve sign statistics.
+A JavaScript module for analyzing text files to count and display signs, vowels, consonants and retrieve sign statistics. 
+
+This module analysis a txt-file in some limited ways. What more could be analyzed in a txt-file? Maybe a future developement for the eager programmer to implement.
 
 ## Installation
 
@@ -13,6 +14,10 @@ npm install sign-analysis-module
 
 ## Usage
 
+The module contains three classes: `SignCounter`, `SignDisplayer` and `SignStatistics`. Each class contains methods for analyzing text files. To use the module and its methods, you need to create a txt file and provide the path to the file as an argument to the constructor of the class.
+
+Example usage of the module:
+
 ```javascript
 import { SignCounter, SignDisplayer, SignStatistics } from 'sign-analysis-module'
 
@@ -21,6 +26,10 @@ const filePath = 'path-to-file.txt' // Use absolute path
 const signCounter = new SignCounter(filePath)
 const signDisplayer = new SignDisplayer(filePath)
 const signStatistics = new SignStatistics(filePath)
+
+console.log(signCounter.countSignsInFile())
+console.log(signDisplayer.showContentFromFile())
+console.log(signStatistics.getTopVowels())
 
 ```
 
