@@ -26,11 +26,11 @@ Slutklämmen i kapitlet överraskade mig och gav mig en tankeställare. Att fakt
 
 | Metodnamn och länk eller kod | Reflektion |
 |------------------------------|------------|
-| getTopVowels | `Small!` Att funktioner ska vara små och ännu mindre än det stämmer inte överens med denna funktion som har flera rader i sig och till och med nestlade villkor. |
-|getTopSigns |`Use Descriptive Names` Funktionen tar fram dom topp fem mest använda vokalerna i en textfil. I namngivningen framgår det att funktionen tar fram topp-vokalerna, men inte vilka. |
-| showVowelsFromFile |`Dont repeat yourself` Egentligen är showVowelsFromFile och showConsonantsFromFile två likadana funktioner som ska returnera antingen vokaler eller konsonanter. Detta hade kunnat komprimerats. Dessutom hur konsonanter och vokaler definieras hade kunnat gjorts på annats vis, istället för att definiera det i varje funktion.|
-|countSignsInFile |`Error handling` Hos samtliga funktioner saknas felhantering. En stor miss som gjorts, inte bara för att säkerställa att indatan kan hanteras men även ur säkerhetsaspekt över vilken indata som modulen hanterar. |
-| countSignsInFile |`Verbs and Keywords` Att argument till en funktion kan krångla till förståelsen av en kod var något kapitel tre tog upp. Inga utav mina funktioner tar emot argument, men mina klasser gör som hanteras av mina funktioner. Något som kan verka smart men kanske oflexibelt. |
+| [getTopVowels](./src/lib/v1/sign-statistics.js)| `Small!` Att funktioner ska vara små och ännu mindre än det stämmer inte överens med denna funktion som har flera rader i sig och till och med nestlade villkor. |
+|[getTopSigns](./src/lib/v1/sign-statistics.js) |`Use Descriptive Names` Funktionen tar fram dom topp fem mest använda vokalerna i en textfil. I namngivningen framgår det att funktionen tar fram topp-vokalerna, men inte vilka. |
+| [showVowelsFromFile](./src/lib/v1/sign-displayer.js) |`Dont repeat yourself` Egentligen är showVowelsFromFile och showConsonantsFromFile två likadana funktioner som ska returnera antingen vokaler eller konsonanter. Detta hade kunnat komprimerats. Dessutom hur konsonanter och vokaler definieras hade kunnat gjorts på annats vis, istället för att definiera det i varje funktion.|
+|[countSignsInFile](./src/lib/v1/sign-counter.js) |`Error handling` Hos samtliga funktioner saknas felhantering. En stor miss som gjorts, inte bara för att säkerställa att indatan kan hanteras men även ur säkerhetsaspekt över vilken indata som modulen hanterar. |
+| [countSignsInFile](./src/lib/v1/sign-counter.js) |`Verbs and Keywords` Att argument till en funktion kan krångla till förståelsen av en kod var något kapitel tre tog upp. Inga utav mina funktioner tar emot argument, men mina klasser gör som hanteras av mina funktioner. Något som kan verka smart men kanske oflexibelt. |
 
 Kapitel tre i Clean Code hade ett klart och tydligt budskap från start till slut; funktioner ska vara korta och lättlästa. Funktioner ska göra en sak bra och endast den saken. Ett budskap som jag köper till varje pris. Min stora reflektion är hur jag ska kunna lyckas med detta upplägg. Att faktiskt låta koden få lösa en sak i taget, det låter rimligt i teorin men att göra det i praktiken är en annan femma. 
 
