@@ -14,7 +14,9 @@ npm install sign-analysis-module
 
 ## Usage
 
-The module contains three classes: `SignCounter`, `SignDisplayer` and `SignStatistics`. Each class contains methods for analyzing text files. To use the module and its methods, you need to create a txt file and provide the path to the file as an argument to the constructor of the class.
+The module contains three classes: `SignCounter`, `SignDisplayer` and `SignStatistics`. Each class contains methods for analyzing text files. 
+
+To use the module and its methods, you need to create a txt file and provide the path to the file as an argument to the constructor of the class.
 
 Example usage of the module:
 
