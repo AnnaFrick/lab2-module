@@ -1,6 +1,6 @@
-import { SignCounter } from './v1/sign-counter.js'
-import { SignDisplayer } from './v1/sign-displayer.js'
-import { SignStatistics } from './v1/sign-statistics.js'
+import { SignCounter } from './v2/sign-counter.js'
+import { SignDisplayer } from './v2/sign-displayer.js'
+import { SignStatistics } from './v2/sign-statistics.js'
 
 export {
   SignCounter,
