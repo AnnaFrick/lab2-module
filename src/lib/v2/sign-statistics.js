@@ -1,16 +1,14 @@
-/**
- * A class that handles statistics of different signs a file.
- */
+
 export class SignStatistics {
   /**
    *
   * @param text The text to analyze.
    */
   constructor(text) {
-    if (typeof text !== 'string') {
+    if (typeof text !== 'string' || text === '') {
       throw new TypeError('The text must be a valid string.')
     }
-    this.text = text
+    this.text = text.toLowerCase()
   }
 
   getTopSigns() {
@@ -40,7 +38,7 @@ export class SignStatistics {
 
   getTopVowels() {
     try {
-      const vowels = 'aeiouyAEIOUY'
+      const vowels = 'aeiouy'
       const vowelCounts = {}
 
       for (const sign of this.text) {
@@ -67,7 +65,7 @@ export class SignStatistics {
 
   getTopConsonants() {
     try {
-      const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
+      const consonants = 'bcdfghjklmnpqrstvwxz'
       const consonantCounts = {}
 
       for (const sign of this.text) {
@@ -88,6 +86,39 @@ export class SignStatistics {
       return topConsonants
     } catch (error) {
       console.error('Error getting top consonants: ' + error)
+    }
+  }
+
+  getTopOtherSigns() {
+    // The top 5 signs that are not letters
+    try {
+      const otherSignsRegex = /[^\p{Alphabetic}\s]+/gu
+      const otherSignsCounts = {}
+
+      for (const sign of this.text) {
+        if (otherSignsRegex.test(sign)) {
+          if (otherSignsCounts[sign]) {
+            otherSignsCounts[sign]++
+          } else {
+            otherSignsCounts[sign] = 1
+          }
+        }
+      }
+
+      const sortedOtherSigns = Object.entries(otherSignsCounts).sort((a, b) => {
+        const aSign = isNaN(Number(a[0])) ? a[0] : Number(a[0])
+        const bSign = isNaN(Number(b[0])) ? b[0] : Number(b[0])
+      
+        return b[1] - a[1] || aSign - bSign
+      })
+      
+      const topOtherSigns = {}
+      for (const [sign, count] of sortedOtherSigns.slice(0, 5)) {
+        topOtherSigns[sign] = count
+      }
+      return topOtherSigns
+    } catch (error) {
+      console.error('Error getting top of other signs: ' + error)
     }
   }
 }

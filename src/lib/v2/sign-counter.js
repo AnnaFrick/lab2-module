@@ -1,6 +1,3 @@
-/**
- * A module that handles a text and count its content.
- */
 
 export class SignCounter {
   /**
@@ -8,10 +5,10 @@ export class SignCounter {
    * @param text The text to analyze.
    */
   constructor(text) {
-    if (typeof text !== 'string') {
+    if (typeof text !== 'string' || text === '') {
       throw new TypeError('The text must be a valid string.')
     }
-    this.text = text
+    this.text = text.toLowerCase()
   }
 
   /**
@@ -37,7 +34,7 @@ export class SignCounter {
    */
   countVowels() {
     try {
-      const vowels = 'aeiouyAEIOUY'
+      const vowels = 'aeiouy'
       let count = 0
 
       for (const sign of this.text) {
@@ -58,7 +55,7 @@ export class SignCounter {
    */
   countConsonants() {
     try {
-      const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
+      const consonants = 'bcdfghjklmnpqrstvwxz'
       let count = 0
 
       for (const sign of this.text) {
@@ -71,4 +68,21 @@ export class SignCounter {
       console.error("Error counting consonants: " + error)
     }
   }
+
+  countOtherSigns() {
+    try {
+      // Regular expression to match numbers and other signs (excluding alphabetic characters and spaces)
+      const otherSignsRegex = /[^\p{Alphabetic}\s]+/gu
+      let count = 0
+
+      for (const sign of this.text) {
+        if (sign.match(otherSignsRegex)) {
+          count++
+        }
+      }
+      return count
+    } catch (error) {
+      console.error('Error counting other signs: ' + error)
+    }
+  }  
 }

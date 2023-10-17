@@ -1,12 +1,10 @@
-/**
- *
- */
+
 export class SignDisplayer {
   /**
    * @param text The text to analyze.
    */
   constructor(text) {
-    if (typeof text !== 'string') {
+    if (typeof text !== 'string' || text === '') {
       throw new TypeError('The text must be a valid string.')
     }
     this.text = text
@@ -21,10 +19,6 @@ export class SignDisplayer {
     }
   }
 
-  /**
-   * A function that returns all vowels from a text.
-   *
-   */
   showVowels() {
     try {
       const vowels = 'aeiouyAEIOUY'
@@ -41,9 +35,6 @@ export class SignDisplayer {
     }
   }
 
-  /**
-   * A function that returns all consonants from a text.
-   */
   showConsonants() {
     try {
       const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
@@ -60,4 +51,15 @@ export class SignDisplayer {
       console.error('Error showing consonants: ' + error)
     }
   }
+
+  showOtherSigns() {
+    try {
+      const otherSignsRegex = /[^\p{Alphabetic}\s]+/gu
+      const otherSignsFromText = this.text.match(otherSignsRegex) || []
+      return otherSignsFromText.join('') // Convert the matched characters to a single string
+    } catch (error) {
+      console.error('Error showing other signs: ' + error)
+    }
+  }
+  
 }
