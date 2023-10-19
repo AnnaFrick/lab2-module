@@ -1,8 +1,15 @@
 # Lab 2 Module - Character Analysis Module
 
-A JavaScript module for analyzing texts to count and display characters, vowels, consonants and retrieve character statistics. 
+The Character Analysis Module is a JavaScript module for analyzing texts. With help from this module you can count and display characters, vowels, consonants and retrieve character statistics. 
 
-This module analysis a txt-file in some limited ways. What more could be analyzed in a txt-file? Maybe a future developement for the eager programmer to implement.
+**Some clarifications:**
+- Characters are all the characters in the text, excluding spaces, punctuation marks and so on. 
+- Vowels are the letters a, e, i, o, u and y (excluding the swedish vocabulary). 
+- Consonants are all letters except the vowels. 
+- Other characters are all characters that are not letters like numbers, punctuation marks and so on (spaces are not included).
+- Character statistics shows the top five characters, vowels and consonants from the text. 
+
+This module analysis a text as a string in the earlier mentioned ways. What more could be analyzed from a text? Maybe a future developement for the eager programmer to implement in this module.
 
 ## Installation
 
