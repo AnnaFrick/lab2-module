@@ -1,7 +1,7 @@
 {
-  "name": "sign-analysis-module",
-  "version": "1.1.2",
-  "description": "Laboration 2. Making a module.",
+  "name": "character-analysis-module",
+  "version": "2.1.0",
+  "description": "Laboration 2 - Making a module. This module analysis a text and returns count of characters and words. It also returns the most used characters, vowels, consonants and other characters.",
   "type": "module",
   "main": "src/lib/index.js",
   "files": [

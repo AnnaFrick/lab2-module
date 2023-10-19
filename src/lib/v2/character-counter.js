@@ -1,5 +1,5 @@
 
-export class SignCounter {
+export class CharacterCounter {
   /**
    *
    * @param text The text to analyze.
@@ -11,19 +11,14 @@ export class SignCounter {
     this.text = text.toLowerCase()
   }
 
-  /**
-   * Counts all signs in a file.
-   *
-   * @returns The amount of signs in the file.
-   */
-  countSigns() {
-    // Counting signs and replacing blank spaces with empty string
+  countCharacters() {
+    // Counting characters and replacing blank spaces with empty string
     try {
-      const signsInText = this.text.replace(/\s/g, '')
-      const signCount = signsInText.length
-      return signCount
+      const charactersInText = this.text.replace(/\s/g, '')
+      const characterCount = charactersInText.length
+      return characterCount
     } catch (error) {
-      console.error("Error counting signs: " + error)
+      console.error("Error counting characters: " + error)
     }
   }
 
@@ -37,8 +32,8 @@ export class SignCounter {
       const vowels = 'aeiouy'
       let count = 0
 
-      for (const sign of this.text) {
-        if (vowels.includes(sign)) {
+      for (const character of this.text) {
+        if (vowels.includes(character)) {
           count++
         }
       }
@@ -58,8 +53,8 @@ export class SignCounter {
       const consonants = 'bcdfghjklmnpqrstvwxz'
       let count = 0
 
-      for (const sign of this.text) {
-        if (consonants.includes(sign)) {
+      for (const character of this.text) {
+        if (consonants.includes(character)) {
           count++
         }
       }
@@ -69,20 +64,29 @@ export class SignCounter {
     }
   }
 
-  countOtherSigns() {
+  countOtherCharacters() {
     try {
-      // Regular expression to match numbers and other signs (excluding alphabetic characters and spaces)
-      const otherSignsRegex = /[^\p{Alphabetic}\s]+/gu
+      // Regular expression to match numbers and other characters (excluding alphabetic characters and spaces)
+      const otherCharactersRegex = /[^\p{Alphabetic}\s]+/gu
       let count = 0
 
-      for (const sign of this.text) {
-        if (sign.match(otherSignsRegex)) {
+      for (const character of this.text) {
+        if (character.match(otherCharactersRegex)) {
           count++
         }
       }
       return count
     } catch (error) {
-      console.error('Error counting other signs: ' + error)
+      console.error('Error counting other characters: ' + error)
     }
-  }  
+  }
+
+  countWords() {
+    try {
+      const words = this.text.split(/\s+/)
+      return words.length
+    } catch (error) {
+      console.error('Error counting words: ' + error)
+    }
+  }
 }

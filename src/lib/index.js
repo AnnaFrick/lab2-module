@@ -1,9 +1,9 @@
-import { SignCounter } from './v2/sign-counter.js'
-import { SignDisplayer } from './v2/sign-displayer.js'
-import { SignStatistics } from './v2/sign-statistics.js'
+import { CharacterCounter } from './v2/character-counter.js'
+import { CharacterDisplayer } from './v2/character-displayer.js'
+import { CharacterStatistics } from './v2/character-statistics.js'
 
 export {
-  SignCounter,
-  SignDisplayer,
-  SignStatistics
+  CharacterCounter,
+  CharacterDisplayer,
+  CharacterStatistics
 }

@@ -1,8 +1,6 @@
 
-export class SignDisplayer {
-  /**
-   * @param text The text to analyze.
-   */
+export class CharacterDisplayer {
+
   constructor(text) {
     if (typeof text !== 'string' || text === '') {
       throw new TypeError('The text must be a valid string.')
@@ -24,9 +22,9 @@ export class SignDisplayer {
       const vowels = 'aeiouyAEIOUY'
       let vowelsFromText = ''
 
-      for (const sign of this.text) {
-        if (vowels.includes(sign)) {
-          vowelsFromText += sign
+      for (const character of this.text) {
+        if (vowels.includes(character)) {
+          vowelsFromText += character
         }
       }
       return vowelsFromText
@@ -40,9 +38,9 @@ export class SignDisplayer {
       const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ'
       let consonantsFromText = ''
 
-      for (const sign of this.text) {
-        if (consonants.includes(sign)) {
-          consonantsFromText += sign
+      for (const character of this.text) {
+        if (consonants.includes(character)) {
+          consonantsFromText += character
         }
       }
 
@@ -52,13 +50,13 @@ export class SignDisplayer {
     }
   }
 
-  showOtherSigns() {
+  showOtherCharacters() {
     try {
-      const otherSignsRegex = /[^\p{Alphabetic}\s]+/gu
-      const otherSignsFromText = this.text.match(otherSignsRegex) || []
-      return otherSignsFromText.join('') // Convert the matched characters to a single string
+      const otherCharactersRegex = /[^\p{Alphabetic}\s]+/gu
+      const otherCharactersFromText = this.text.match(otherCharactersRegex) || []
+      return otherCharactersFromText.join('') // Convert the matched characters to a single string
     } catch (error) {
-      console.error('Error showing other signs: ' + error)
+      console.error('Error showing other characters: ' + error)
     }
   }
   

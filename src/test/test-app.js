@@ -1,24 +1,25 @@
-import { SignCounter } from "../lib/index.js"
-import { SignDisplayer } from "../lib/index.js"
-import { SignStatistics } from "../lib/index.js"
+import { CharacterCounter } from "../lib/index.js"
+import { CharacterDisplayer } from "../lib/index.js"
+import { CharacterStatistics } from "../lib/index.js"
 
-const text = 'Hejsan, detta är en text som ska testas! 1234874368746583746583567890'
+const text = 'Hejsan, detta är en text som ska testas!'
 
-const counter = new SignCounter(text)
-console.log('Count of signs from text: ', counter.countSigns())
-console.log('Count of vowels from text: ', counter.countVowels())
-console.log('Count of consonants from text: ', counter.countConsonants())
-console.log("Count of other signs from text: ", counter.countOtherSigns())
+const counter = new CharacterCounter(text)
+console.log('Counted characters from text: ', counter.countCharacters())
+console.log('Counted vowels from text: ', counter.countVowels())
+console.log('Counted consonants from text: ', counter.countConsonants())
+console.log("Count of other characters from text: ", counter.countOtherCharacters())
+console.log("Counted words from text: " + counter.countWords())
 
-const displayer = new SignDisplayer(text)
+const displayer = new CharacterDisplayer(text)
 console.log('Text content: ', displayer.showContent())
 console.log('Vowels in text: ', displayer.showVowels())
 console.log('Consonants in text: ', displayer.showConsonants())
-console.log('Other signs in text: ', displayer.showOtherSigns())
+console.log('Other characters in text: ', displayer.showOtherCharacters())
 
-const stats = new SignStatistics(text)
-console.log('Top 5 signs that are used in the text: ', stats.getTopSigns())
-console.log('Top 5 vowels in text: ', stats.getTopVowels())
-console.log('Top 5 consonants in text: ', stats.getTopConsonants())
-console.log('Top 5 other signs in text: ', stats.getTopOtherSigns())
+const stats = new CharacterStatistics(text)
+console.log(stats.getTopCharacters())
+console.log(stats.getTopVowels())
+console.log(stats.getTopConsonants())
+console.log(stats.getTopOtherCharacters())
 
