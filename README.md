@@ -7,7 +7,8 @@ The Character Analysis Module is a JavaScript module for analyzing texts. With h
 - Vowels are the letters a, e, i, o, u and y (excluding the swedish vocabulary). 
 - Consonants are all letters except the vowels. 
 - Other characters are all characters that are not letters like numbers, punctuation marks and so on (spaces are not included).
-- Character statistics shows the top five characters, vowels and consonants from the text. 
+- Character statistics shows the top five characters, vowels and consonants from the text.
+- Words are counted as a sequence of characters separated by spaces.
 
 This module analysis a text as a string in the earlier mentioned ways. What more could be analyzed from a text? Maybe a future developement for the eager programmer to implement in this module.
 
@@ -30,11 +31,11 @@ Example usage of the module:
 ```javascript
 import { CharacterCounter, CharacterDisplayer, CharacterStatistics } from 'character-analysis-module'
 
-const filePath = 'path-to-file.txt' // Use absolute path
+const textToAnalyze = 'Type/insert the text you would like to analyze here!' // Use absolute path
 
-const characterCounter = new CharacterCounter(filePath)
-const characterDisplayer = new CharacterDisplayer(filePath)
-const characterStatistics = new CharacterStatistics(filePath)
+const characterCounter = new CharacterCounter(textToAnalyze)
+const characterDisplayer = new CharacterDisplayer(textToAnalyze)
+const characterStatistics = new CharacterStatistics(textToAnalyze)
 
 console.log(characterCounter.countcharactersInFile())
 console.log(characterDisplayer.showContentFromFile())
@@ -45,16 +46,20 @@ console.log(characterStatistics.getTopVowels())
 ## References
 
 **characterCounter**
-- `countcharactersInFile()`: Counts all characters in the file.
-- `countVowelsInFile()`: Counts all vowels in the file.
-- `countConsonantsInFile()`: Counts all consonants in the file.
+- `countCharacters()`: Counts all characters from the text.
+- `countVowels()`: Counts all vowels from the text.
+- `countConsonants()`: Counts all consonants from the text.
+- `countOtherCharacters()`: Counts all other characters from the text.
+- `countWords()`: Counts all words from the text.
 
 **characterDisplayer**
-- `showContentFromFile()`: Returns all characters (the whole content) in the file.
-- `showVowelsFromFile()`: Returns all vowels in the file.
-- `showConsonantsFromFile()`: Returns all consonants in the file.
+- `showContent()`: Returns all characters (the whole content) from the text.
+- `showVowels()`: Returns all vowels from the text.
+- `showConsonants()`: Returns all consonants from the text.
+- `showOtherCharacters()`: Returns all other characters from the text.
 
 **characterStatistics**
-- `getTopcharacters()`: Retrieves the top five characters in the file.
-- `getTopVowels()`: Retrieves the top five vowels in the file.
-- `getTopConsonants()`: Retrieves the top five consonants in the file.
+- `getTopCharacters()`: Retrieves the top five characters from the text.
+- `getTopVowels()`: Retrieves the top five vowels from the text.
+- `getTopConsonants()`: Retrieves the top five consonants from the text.
+- `getTopOtherCharacters()`: Retrieves the top five other characters from the text.
