@@ -19,7 +19,7 @@ The functions should return:
 
 1. Open the terminal.
 2. Navigate to the project folder.
-3. Run the command `npm run test-app`.
+3. Run the command `npm run test`.
 4. Verify that the functions passes the test.
 
 **Input Data:**
@@ -103,6 +103,10 @@ The functions should return:
 - Not all functions passed their tests. 
 - The `getTopOtherCharacters` function failed the test.
 
+**Screenshots:**
+
+![Test Results](./test.png)
+
 ## TC4: Error handling
 
 **Scenario:**
@@ -133,3 +137,7 @@ The functions should return:
 
 - The error messages were returned as expected.
 - The error tests passed their tests.
+
+**Screenshots:**
+
+![Test Results](./test-error.png)
