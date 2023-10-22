@@ -39,7 +39,7 @@ The test passed.
 
 **Comments**
 
-![TC1 Output](../img/TC1.2.png)
+![TC1 Output](./img/TC1.2.png)
 
 **Test Date and Author**
 
@@ -59,7 +59,7 @@ The test passed.
 
 **Comments**
 
-![TC2 Output](../img/TC2.png)
+![TC2 Output](./img/TC2.png)
 
 **Test Date and Author**
 
@@ -79,7 +79,7 @@ The test passed.
 
 **Comments**
 
-![TC3 Output](../img/TC3.png)
+![TC3 Output](./img/TC3.png)
 
 **Test Date and Author**
 
@@ -99,7 +99,7 @@ The test passed.
 
 **Comments**
 
-![TC4 Output](../img/TC4.png)
+![TC4 Output](./img/TC4.png)
 
 **Test Date and Author**
 
@@ -121,7 +121,7 @@ The test passed.
 
 The expected output was only with lower case letters while the results was mixed with in lower and upper case letters.
 
-![TC5 Output](../img/TC5.png)
+![TC5 Output](./img/TC5.png)
 
 **Test Date and Author**
 
@@ -143,7 +143,7 @@ The test failed.
 
 The expected output did not include the space sign. The space sign was included in the results. The results was in an object while the expected output wasn't.
 
-![TC6 Output](../img/TC6.png)
+![TC6 Output](./img/TC6.png)
 
 **Test Date and Author**
 
@@ -164,7 +164,7 @@ The test passed.
 
 The results was in an array of arrays while the expected output wasn't. But the order of the top five vowels was correct.
 
-![TC7 Output](../img/TC7.png)
+![TC7 Output](./img/TC7.png)
 
 **Test Date and Author**
 

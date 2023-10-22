@@ -105,7 +105,7 @@ The functions should return:
 
 **Screenshots:**
 
-![Test Results](./test.png)
+![Test Results](./img/test.png)
 
 ## TC4: Error handling
 
@@ -140,4 +140,4 @@ The functions should return:
 
 **Screenshots:**
 
-![Test Results](./test-error.png)
+![Test Results](./img/test-error.png)
