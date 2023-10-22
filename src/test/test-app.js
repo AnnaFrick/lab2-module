@@ -2,24 +2,37 @@ import { CharacterCounter } from "../lib/index.js"
 import { CharacterDisplayer } from "../lib/index.js"
 import { CharacterStatistics } from "../lib/index.js"
 
-const text = 'Hejsan, detta är en text som ska testas!'
+const text = 'Hello! This is a simple text that is provided to test the functionality of this module. This text contains 152 characters, 31 words, 47 vowels, 88 consonants and 17 other characters.'
+
+function test(description, actual, expected) {
+    if (actual === expected) {
+      console.log(`Test for ${description} passed.`)
+    } else {
+      console.error(`Test for ${description} failed. Expected ${expected}, but got ${actual}.`)
+    }
+}
 
 const counter = new CharacterCounter(text)
-console.log('Counted characters from text: ', counter.countCharacters())
-console.log('Counted vowels from text: ', counter.countVowels())
-console.log('Counted consonants from text: ', counter.countConsonants())
-console.log("Count of other characters from text: ", counter.countOtherCharacters())
-console.log("Counted words from text: " + counter.countWords())
+console.log('-------Testing CharacterCounter class-------')
+test('countCharacters', counter.countCharacters(), 152);
+test('countVowels', counter.countVowels(), 47);
+test('countConsonants', counter.countConsonants(), 88);
+test('countOtherCharacters', counter.countOtherCharacters(), 17);
+test('countWords', counter.countWords(), 31);
+console.log('')
 
 const displayer = new CharacterDisplayer(text)
-console.log('Text content: ', displayer.showContent())
-console.log('Vowels in text: ', displayer.showVowels())
-console.log('Consonants in text: ', displayer.showConsonants())
-console.log('Other characters in text: ', displayer.showOtherCharacters())
+console.log('-------Testing CharacterDisplayer class-------')
+test('showContent', displayer.showContent(), text);
+test('showVowels', displayer.showVowels(), 'eoiiaieeaioieoeeuioaiyoioueieoaiaaeooeooaaoeaae')
+test('showConsonants', displayer.showConsonants(), 'HllThsssmpltxtthtsprvddttstthfnctnltfthsmdlThstxtcntnschrctrswrdsvwlscnsnntsndthrchrctrs')
+test('showOtherCharacters', displayer.showOtherCharacters(), '!.152,31,47,8817.')
+console.log('')
+
 
 const stats = new CharacterStatistics(text)
-console.log(stats.getTopCharacters())
-console.log(stats.getTopVowels())
-console.log(stats.getTopConsonants())
-console.log(stats.getTopOtherCharacters())
-
+console.log('-------Testing CharacterStatistics class-------')
+test('getTopCharacters', Object.keys(stats.getTopCharacters()).toString(), Object.keys({ t: 20, s: 14, e: 12, o: 12, i: 10 }).toString())
+test('getTopVowels', Object.keys(stats.getTopVowels()).toString(), Object.keys({ e: 12, o: 12, i: 10, a: 10, u: 2 }).toString())
+test('getTopConsonants', Object.keys(stats.getTopConsonants()).toString(), Object.keys({ t: 20, s: 14, h: 9, n: 8, r: 7 }).toString())
+test('getTopOtherCharacters', Object.keys(stats.getTopOtherCharacters()).toString(), Object.keys({ ',': 1, '!': 1 }).toString())

@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "test": "node ./src/test/test-app.js",
+    "test-error": "node ./src/test/test-error.js",
     "start": "vite",
     "dev": "vite",
     "lint": "npx eslint ./src || exit 0",

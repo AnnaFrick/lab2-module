@@ -24,6 +24,9 @@
 
 - The returned count should be a non-negative integer.
 
+**Results:**
+
+
 ## TC2: Counting vowels in file
 
 **Scenario:** Verify that the `countVowelsInFile` function correctly counts all vowels in a file.
