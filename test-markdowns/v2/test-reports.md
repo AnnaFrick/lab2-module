@@ -1,6 +1,6 @@
 # Test Reports for the Character Analysis Module
 
- - In the `test-app.js` the functionality of this module is tested as below.
+ - In the `test-app.js` the functionality of this module is tested as follows:
 
  ```javascript
 import { CharacterCounter } from "../lib/index.js"
@@ -56,6 +56,15 @@ Test for countOtherCharacters passed.
 Test for countWords passed.
 ```
 
+**Status**
+
+All tests for the `CharacterCounter` class passed.
+
+**Test Date and Author**
+
+- Test date: 2023-10-22
+- Author: Anna Engström Frick
+
 
 ## Report for TC2
 
@@ -69,6 +78,16 @@ Test for showConsonants passed.
 Test for showOtherCharacters passed.
 ```
 
+**Status**
+
+All tests for the `CharacterDisplayer` class passed.
+
+**Test Date and Author**
+
+- Test date: 2023-10-22
+- Author: Anna Engström Frick
+
+
 ## Report for TC3
 
 **Results**
@@ -81,5 +100,40 @@ Test for getTopConsonants passed.
 Test for getTopOtherCharacters failed. Expected 1,7,8,,,., but got 1,2,3,,,..
 ```
 
+**Status**
 
+Three tests for the `CharacterStatistics` class passed, but one failed.
 
+**Test Date and Author**
+
+- Test date: 2023-10-22
+- Author: Anna Engström Frick
+
+## Report for TC4
+
+**Results**
+
+```
+
+> character-analysis-module@2.1.0 test-error
+> node ./src/test/test-error.js
+
+-------Testing CharacterCounter class (Error Handling)-------
+Failed to create an instance of CharacterCounter: TypeError: The text must be a valid string.
+
+-------Testing CharacterDisplayer class (Error Handling)-------
+Failed to create an instance of CharacterDisplayer: TypeError: The text must be a valid string.
+
+-------Testing CharacterStatistics class (Error Handling)-------
+Failed to create an instance of CharacterStatistics: TypeError: The text must be a valid string.
+
+```
+
+**Status**
+
+All tests for Error Handling passed.
+
+**Test Date and Author**
+
+- Test date: 2023-10-22
+- Author: Anna Engström Frick

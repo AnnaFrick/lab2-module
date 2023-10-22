@@ -81,10 +81,10 @@ Verify that the functions from `class CharacterStatistics` correctly displays th
 **Expected Outcome:**
 
 The functions should return:
-- The top 5 characters from the text.
-- The top 5 vowels from the text.
-- The top 5 consonants from the text.
-- The top 5 other characters from the text.
+- The top 5 characters, as an object with character as key and amount of apperances as value, from the text.
+- The top 5 vowels, as an object with vowel as key and amount of apperances as value, from the text.
+- The top 5 consonants, as an object with consonant as key and amount of apperances as value, from the text.
+- The top 5 other characters, as an object with other character as key and amount of apperances as value, from the text.
 
 **Test Steps:**
 
