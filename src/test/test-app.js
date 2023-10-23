@@ -5,11 +5,11 @@ import { CharacterStatistics } from "../lib/index.js"
 const text = 'Hello! This is a simple text that is provided to test the functionality of this module. This text contains 152 characters, 31 words, 47 vowels, 88 consonants and 17 other characters.'
 
 function test(description, actual, expected) {
-    if (actual === expected) {
-      console.log(`Test for ${description} passed.`)
-    } else {
-      console.error(`Test for ${description} failed. Expected ${expected}, but got ${actual}.`)
-    }
+  if (actual === expected) {
+    console.log(`Test for ${description} passed.`)
+  } else {
+    console.error(`Test for ${description} failed. Expected ${expected}, but got ${actual}.`)
+  }
 }
 
 const counter = new CharacterCounter(text)
@@ -35,4 +35,4 @@ console.log('-------Testing CharacterStatistics class-------')
 test('getTopCharacters', Object.keys(stats.getTopCharacters()).toString(), Object.keys({ t: 20, s: 14, e: 12, o: 12, i: 10 }).toString())
 test('getTopVowels', Object.keys(stats.getTopVowels()).toString(), Object.keys({ e: 12, o: 12, i: 10, a: 10, u: 2 }).toString())
 test('getTopConsonants', Object.keys(stats.getTopConsonants()).toString(), Object.keys({ t: 20, s: 14, h: 9, n: 8, r: 7 }).toString())
-test('getTopOtherCharacters', Object.keys(stats.getTopOtherCharacters()).toString(), Object.keys({ '1': 3, ',': 3, '.':2, '8':2, '7':2 }).toString())
+test('getTopOtherCharacters', Object.keys(stats.getTopOtherCharacters()).toString(), Object.keys({ '1': 3, ',': 3, '.': 2, '8': 2, '7': 2 }).toString())

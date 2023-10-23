@@ -1,4 +1,3 @@
-
 export class CharacterDisplayer {
 
   constructor(text) {
@@ -54,10 +53,10 @@ export class CharacterDisplayer {
     try {
       const otherCharactersRegex = /[^\p{Alphabetic}\s]+/gu
       const otherCharactersFromText = this.text.match(otherCharactersRegex) || []
-      return otherCharactersFromText.join('') // Convert the matched characters to a single string
+      return otherCharactersFromText.join('')
     } catch (error) {
       console.error('Error showing other characters: ' + error)
     }
   }
-  
+
 }

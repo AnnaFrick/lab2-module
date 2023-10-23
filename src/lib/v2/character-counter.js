@@ -1,9 +1,5 @@
 
 export class CharacterCounter {
-  /**
-   *
-   * @param text The text to analyze.
-   */
   constructor(text) {
     if (typeof text !== 'string' || text === '') {
       throw new TypeError('The text must be a valid string.')
@@ -22,11 +18,6 @@ export class CharacterCounter {
     }
   }
 
-  /**
-   * Counts all vowels in a file.
-   *
-   * @returns The amount of vowels in the file.
-   */
   countVowels() {
     try {
       const vowels = 'aeiouy'
@@ -43,11 +34,6 @@ export class CharacterCounter {
     }
   }
 
-  /**
-   * Counts all consonants in a file.
-   *
-   * @returns The amount of consonants in the file.
-   */
   countConsonants() {
     try {
       const consonants = 'bcdfghjklmnpqrstvwxz'

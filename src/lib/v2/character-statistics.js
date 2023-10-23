@@ -1,9 +1,6 @@
-
+// The class is used to get the top 5 characters of each category.
 export class CharacterStatistics {
-  /**
-   *
-  * @param text The text to analyze.
-   */
+
   constructor(text) {
     if (typeof text !== 'string' || text === '') {
       throw new TypeError('The text must be a valid string.')
@@ -108,10 +105,10 @@ export class CharacterStatistics {
       const sortedOtherCharacters = Object.entries(otherCharactersCounts).sort((a, b) => {
         const aCharacter = isNaN(Number(a[0])) ? a[0] : Number(a[0])
         const bCharacter = isNaN(Number(b[0])) ? b[0] : Number(b[0])
-      
+
         return b[1] - a[1] || aCharacter - bCharacter
       })
-      
+
       const topOtherCharacters = {}
       for (const [character, count] of sortedOtherCharacters.slice(0, 5)) {
         topOtherCharacters[character] = count
